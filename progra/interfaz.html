@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interfaz</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e0f7fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 350px;
+        }
+
+        h1 {
+            color: #00796b;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #00796b;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            width: 100%;
+            margin: 10px 0;
+        }
+
+        button:hover {
+            background-color: #004d40;
+        }
+
+        .panel {
+            margin-top: 30px;
+        }
+
+        .panel button {
+            background-color: #004d40;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            width: 100%;
+            margin: 10px 0;
+        }
+
+        .panel button:hover {
+            background-color: #00796b;
+        }
+
+        .content {
+            margin-top: 20px;
+            font-size: 1.1em;
+            color: #00796b;
+        }
+
+        .image-links {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+            gap: 30px;
+        }
+
+        .image-links a {
+            display: inline-block;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .image-links img {
+            width: 250px;
+            height: 350px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            object-fit: cover;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .image-links a:hover img {
+            transform: scale(1.05); /* Aumenta ligeramente el tamaño de la imagen al pasar el cursor */
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Estructura de Datos</h1>
+        <!-- Panel con botones para temas -->
+        <div id="panel" class="panel">
+            <button onclick="goToPage('tema1')">Tema 1</button>
+            <button onclick="goToPage('tema2')">Tema 2</button>
+            <button onclick="goToPage('tema3')">Tema 3</button>
+            <button onclick="goToPage('tema4')">Tema 4</button>
+            <button onclick="goToPage('tema5')">Tema 5</button>
+            <button onclick="goToPage('tema6')">Tema 6</button>
+        </div>
+
+        <!-- Enlaces con imágenes -->
+        <div class="image-links">
+            <a href="https://www.programacion.com" target="_blank">
+                <img src="https://imgs.search.brave.com/cH5AuLfOMD4yiQDf799t4QusLpVBg5auolIjrUx2aJo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/dW5lYm9vay5lcy9i/bG9nL3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDE4LzAzL1VOQS1I/SVNUT1JJQS1ERS1M/QS1JTkZPUk0lQzMl/ODFUSUNBLTIwMHgz/MDAuanBn" alt="Libro de Programación">
+            </a>
+            <a href="https://www.youtube.com" target="_blank">
+                <img src="https://imgs.search.brave.com/gWOrZIUxgBnsAthUs-7s6nT8KnAIWsobJ2MUjxuFFuo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jb25j/ZXB0by5kZS93cC1j/b250ZW50L3VwbG9h/ZHMvMjAyMC8wOC9Q/cm9ncmFtYWNpb24t/aW5mb3JtYXRpY2Et/c2NhbGVkLWUxNzI0/OTYwMDMzNTEzLTgw/MHg0MDAuanBn" alt="YouTube">
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Función para redirigir a una nueva página según el tema
+        function goToPage(tema) {
+            switch(tema) {
+                case 'tema1':
+                    window.location.href = "tema1.html"; // Redirige a tema1.html
+                    break;
+                case 'tema2':
+                    window.location.href = "tema2.html"; // Redirige a tema2.html
+                    break;
+                case 'tema3':
+                    window.location.href = "tema3.html"; // Redirige a tema3.html
+                    break;
+                case 'tema4':
+                    window.location.href = "tema4.html"; // Redirige a tema4.html
+                    break;
+                case 'tema5':
+                    window.location.href = "tema5.html"; // Redirige a tema5.html
+                    break;
+                case 'tema6':
+                    window.location.href = "tema6.html"; // Redirige a tema6.html
+                    break;
+                default:
+                    alert("Tema no encontrado.");
+            }
+        }
+    </script>
+
+</body>
+</html>

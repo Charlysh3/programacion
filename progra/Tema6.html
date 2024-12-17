@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad 6 - Métodos de Búsqueda</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f1f8e9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .content-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 70%;
+            overflow-y: auto;
+            max-height: 80vh;
+        }
+
+        h2 {
+            color: #388e3c;
+            font-size: 2em;
+        }
+
+        h3 {
+            color: #2c6e1f;
+            font-size: 1.6em;
+        }
+
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        .back-button {
+            background-color: #388e3c;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .back-button:hover {
+            background-color: #2c6e1f;
+        }
+
+        .example {
+            background-color: #c8e6c9;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            border: 1px solid #388e3c;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content-container">
+        <h2>Métodos de Búsqueda</h2>
+
+        <h3>¿Qué son los métodos de búsqueda?</h3>
+        <p>Los métodos de búsqueda en programación son un conjunto de instrucciones que permiten localizar un elemento dentro de una estructura de datos. Estos métodos ayudan a los programadores a crear programas que manejen la información de manera eficiente y rápida.</p>
+
+        <h3>Tipos de algoritmos de búsqueda</h3>
+        <ul>
+            <li><strong>Búsqueda lineal:</strong> Recorre cada elemento de la estructura hasta encontrar el elemento buscado.</li>
+            <li><strong>Búsqueda binaria:</strong> Busca en una lista ordenada dividiendo repetidamente el conjunto en mitades, eliminando la mitad donde no está el elemento.</li>
+            <li><strong>Búsqueda de profundidad primero (DFS):</strong> Explora lo más profundo posible en una estructura de datos, como un árbol o grafo, antes de retroceder.</li>
+            <li><strong>Búsqueda de amplitud primero (BFS):</strong> Explora los nodos vecinos de un nodo antes de profundizar en los nodos más lejanos.</li>
+        </ul>
+
+        <h3>Métodos de comparación de llaves</h3>
+        <p>Los métodos de comparación de llaves son los más sencillos de implementar, pero su desempeño se deteriora cuando el número de registros a comparar aumenta. Estos métodos comparan los elementos de la estructura con el valor que se busca, uno a uno.</p>
+
+        <h3>Métodos de búsqueda por transformación de llaves (Hash)</h3>
+        <p>Los métodos de búsqueda por transformación de llaves (Hash) aumentan la eficiencia en el tiempo de ejecución. Utilizan una función hash para transformar las llaves en índices en una tabla de hash, lo que permite acceder rápidamente a los elementos sin necesidad de recorrer la estructura completa.</p>
+
+        <h3>Ejemplo práctico de Búsqueda Lineal</h3>
+        <p>A continuación, un ejemplo básico de cómo funciona el algoritmo de búsqueda lineal:</p>
+
+        <div class="example">
+            <h3>Ejemplo en pseudocódigo:</h3>
+            <pre>
+función busquedaLineal(lista, objetivo):
+    para i desde 0 hasta longitud(lista)-1:
+        si lista[i] == objetivo:
+            devolver i  // Elemento encontrado
+    devolver -1  // Elemento no encontrado
+
+lista = [3, 5, 7, 9, 11]
+resultado = busquedaLineal(lista, 7)
+imprimir(resultado)  // Resultado: 2 (índice donde se encuentra el elemento)
+            </pre>
+        </div>
+
+        <button class="back-button" onclick="window.history.back();">Volver</button>
+    </div>
+
+</body>
+</html>

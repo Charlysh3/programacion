@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad 2 - Recursividad</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e8f5e9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .content-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 70%;
+            overflow-y: auto;
+            max-height: 80vh;
+        }
+
+        h2 {
+            color: #388e3c;
+            font-size: 2em;
+        }
+
+        h3 {
+            color: #2c6b2f;
+            font-size: 1.6em;
+        }
+
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        .back-button {
+            background-color: #388e3c;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .back-button:hover {
+            background-color: #2c6b2f;
+        }
+
+        .example {
+            background-color: #f1f8e9;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            border: 1px solid #388e3c;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content-container">
+        <h2>Recursividad</h2>
+
+        <h3>¿Qué es la Recursividad?</h3>
+        <p>La recursividad en programación es un concepto que consiste en que una función se llama a sí misma para resolver un problema. Cada vez que una función se llama a sí misma, se produce un paso de recursión.</p>
+
+        <h3>¿Cuándo usar la recursividad?</h3>
+        <p>La recursividad es útil para resolver problemas que se pueden definir en sus propios términos. Por ejemplo, para recorrer un árbol de elementos, como un sistema de archivos o el árbol de elementos de una página web, se puede utilizar la recursividad.</p>
+
+        <h3>Ventajas y desventajas</h3>
+        <ul>
+            <li><strong>Ventajas:</strong> Permite abordar problemas complejos de manera simple y elegante.</li>
+            <li><strong>Desventajas:</strong> Los algoritmos recursivos pueden ser más lentos y consumir más recursos al ejecutarse en un ordenador.</li>
+        </ul>
+
+        <h3>Ejemplo práctico de recursividad</h3>
+        <p>Veamos un ejemplo de cómo se puede usar la recursividad para calcular el factorial de un número.</p>
+
+        <div class="example">
+            <h3>Ejemplo en pseudocódigo:</h3>
+            <pre>
+función factorial(n):
+    si n == 0:
+        devolver 1
+    sino:
+        devolver n * factorial(n - 1)
+
+resultado = factorial(5)  // Llamada recursiva: 5 * 4 * 3 * 2 * 1
+imprimir(resultado)  // Imprime 120
+            </pre>
+        </div>
+
+        <button class="back-button" onclick="window.history.back();">Volver</button>
+    </div>
+
+</body>
+</html>

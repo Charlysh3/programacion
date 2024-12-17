@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e0f7fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 350px;
+        }
+
+        h1 {
+            color: #00796b;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: 2px solid #00796b;
+            border-radius: 5px;
+            font-size: 1.1em;
+        }
+
+        button {
+            background-color: #00796b;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            width: 100%;
+            margin: 10px 0;
+        }
+
+        button:hover {
+            background-color: #004d40;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Estructura de Datos</h1>
+        <form id="userForm">
+            <label for="username" style="font-size: 1.2em; color: #00796b;">Ingresa tu nombre:</label>
+            <input type="text" id="username" name="username" placeholder="Tu nombre..." required>
+            <button type="button" onclick="showPanel()">Siguiente</button>
+        </form>
+    </div>
+
+    <script>
+        // Función para mostrar el panel cuando el usuario haga clic en "Siguiente"
+        function showPanel() {
+            var username = document.getElementById('username').value;
+            if (username.trim() !== "") {
+                window.location.href = "interfaz.html";  // Redirige a la interfaz
+            } else {
+                alert("Por favor, ingresa tu nombre.");
+            }
+        }
+    </script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad 4 - Estructuras No Lineales</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e3f2fd;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .content-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 70%;
+            overflow-y: auto;
+            max-height: 80vh;
+        }
+
+        h2 {
+            color: #1976d2;
+            font-size: 2em;
+        }
+
+        h3 {
+            color: #1565c0;
+            font-size: 1.6em;
+        }
+
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        .back-button {
+            background-color: #1976d2;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .back-button:hover {
+            background-color: #1565c0;
+        }
+
+        .example {
+            background-color: #bbdefb;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            border: 1px solid #1976d2;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content-container">
+        <h2>Estructuras No Lineales</h2>
+
+        <h3>¿Qué son las estructuras no lineales?</h3>
+        <p>En programación, las estructuras de datos no lineales son aquellas en las que los elementos pueden estar enlazados a cualquier otro componente, es decir, pueden tener varios predecesores o sucesores. También se les conoce como estructuras multienlazadas.</p>
+
+        <h3>Ventajas y desventajas de las estructuras no lineales</h3>
+        <p>Las estructuras no lineales son más flexibles y complejas que las lineales, pero pueden requerir más tiempo y espacio para recorrerlas y procesarlas.</p>
+
+        <h3>Ejemplos de estructuras no lineales</h3>
+        <ul>
+            <li><strong>Árboles:</strong> Estructura jerárquica donde cada nodo tiene un único padre y varios hijos.</li>
+            <li><strong>Grafos:</strong> Conjunto de nodos conectados por aristas, sin una jerarquía predefinida.</li>
+            <li><strong>Montones:</strong> Estructura que sigue una propiedad de orden, como en los heaps.</li>
+            <li><strong>Tablas hash:</strong> Estructura de datos que mapea claves a valores de manera eficiente.</li>
+        </ul>
+
+        <h3>¿Por qué usar estructuras no lineales?</h3>
+        <p>Estas estructuras permiten modelar relaciones más complejas entre los elementos, lo que las hace útiles en aplicaciones como redes sociales, algoritmos de optimización y bases de datos.</p>
+
+        <h3>Ejemplo práctico de un Árbol</h3>
+        <p>A continuación, un ejemplo básico de cómo se estructura un árbol binario:</p>
+
+        <div class="example">
+            <h3>Ejemplo en pseudocódigo:</h3>
+            <pre>
+class Nodo:
+    valor
+    izquierdo
+    derecho
+
+función insertar(nodo, valor):
+    si nodo es nulo:
+        nodo = nuevo Nodo(valor)
+    si valor < nodo.valor:
+        nodo.izquierdo = insertar(nodo.izquierdo, valor)
+    sino:
+        nodo.derecho = insertar(nodo.derecho, valor)
+    devolver nodo
+
+raiz = nuevo Nodo(10)
+raiz = insertar(raiz, 5)
+raiz = insertar(raiz, 15)
+            </pre>
+        </div>
+
+        <button class="back-button" onclick="window.history.back();">Volver</button>
+    </div>
+
+</body>
+</html>

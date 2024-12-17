@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad 1 - Introducción</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e0f7fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .content-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 70%;
+            overflow-y: auto;
+            max-height: 80vh;
+        }
+
+        h2 {
+            color: #00796b;
+            font-size: 2em;
+        }
+
+        h3 {
+            color: #004d40;
+            font-size: 1.6em;
+        }
+
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        .back-button {
+            background-color: #00796b;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .back-button:hover {
+            background-color: #004d40;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content-container">
+        <h2>Introducción a las estructuras de datos</h2>
+
+        <h3>1.1 Clasificación de las estructuras de datos</h3>
+        <ul>
+            <li><strong>Primitivas:</strong> Datos básicos como enteros, flotantes, caracteres y booleanos.</li>
+            <li><strong>No primitivas:</strong> Construidas a partir de primitivas.</li>
+            <li><strong>Lineales:</strong> Arreglos, listas, pilas y colas.</li>
+            <li><strong>No lineales:</strong> Árboles y grafos.</li>
+            <li><strong>Estáticas:</strong> Tamaño fijo, como arreglos tradicionales.</li>
+            <li><strong>Dinámicas:</strong> Tamaño variable, como listas enlazadas.</li>
+        </ul>
+
+        <h3>1.2 Tipos de datos abstractos (TDA)</h3>
+        <ul>
+            <li><strong>TDA:</strong> Representación lógica de datos y sus operaciones.</li>
+            <li><strong>Listas:</strong> Acceso por índice.</li>
+            <li><strong>Pilas:</strong> Operaciones en el tope.</li>
+            <li><strong>Colas:</strong> Orden de llegada y salida.</li>
+        </ul>
+
+        <h3>1.3 Ejemplos de TDA's</h3>
+        <ul>
+            <li><strong>Colas:</strong> Gestión de procesos en sistemas operativos.</li>
+            <li><strong>Pilas:</strong> Manejo de expresiones aritméticas.</li>
+        </ul>
+
+        <h3>1.4 Manejo de memoria</h3>
+        <ul>
+            <li><strong>Memoria estática:</strong> Asignada al inicio, usada por variables globales/locales.</li>
+            <li><strong>Memoria dinámica:</strong> Asignada/liberada durante la ejecución. Java usa recolector de basura.</li>
+        </ul>
+
+        <h3>1.5 Análisis de algoritmos</h3>
+        <ul>
+            <li><strong>Complejidad temporal:</strong> Tiempo de ejecución según el tamaño de entrada (Big-O).</li>
+            <li><strong>Complejidad espacial:</strong> Memoria requerida para ejecutar el algoritmo.</li>
+            <li><strong>Eficiencia:</strong> Evalúa tiempo y memoria utilizados en comparación con otros algoritmos.</li>
+        </ul>
+
+        <button class="back-button" onclick="window.history.back();">Volver</button>
+    </div>
+
+</body>
+</html>
+

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad 5 - Métodos de Ordenamiento</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e8f5e9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .content-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 70%;
+            overflow-y: auto;
+            max-height: 80vh;
+        }
+
+        h2 {
+            color: #388e3c;
+            font-size: 2em;
+        }
+
+        h3 {
+            color: #2c6e1f;
+            font-size: 1.6em;
+        }
+
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        .back-button {
+            background-color: #388e3c;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .back-button:hover {
+            background-color: #2c6e1f;
+        }
+
+        .example {
+            background-color: #c8e6c9;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            border: 1px solid #388e3c;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content-container">
+        <h2>Métodos de Ordenamiento</h2>
+
+        <h3>¿Qué son los métodos de ordenamiento?</h3>
+        <p>Los métodos de ordenamiento en programación son algoritmos que reorganizan los datos de una estructura en un orden específico. El objetivo principal de estos métodos es facilitar la búsqueda de los elementos del conjunto ordenado.</p>
+
+        <h3>¿Por qué usar métodos de ordenamiento?</h3>
+        <p>Los métodos de ordenamiento son algoritmos que realizan la operación de arreglar los registros de una tabla en algún orden secuencial de acuerdo a un criterio de ordenamiento, mejorando la eficiencia de las búsquedas y optimizando el manejo de datos.</p>
+
+        <h3>Tipos de métodos de ordenamiento</h3>
+        <ul>
+            <li><strong>Ordenación por selección:</strong> Se mueve el elemento más grande o más pequeño del vector a la posición 1, y así sucesivamente.</li>
+            <li><strong>Ordenación por inserción:</strong> Se insertan los elementos no ordenados del vector en vectores más pequeños ya ordenados.</li>
+            <li><strong>Ordenación por burbuja:</strong> Se comparan parejas sucesivas de elementos en cada pasada. Si una pareja está en orden decreciente, se intercambian sus valores.</li>
+            <li><strong>Ordenamiento rápido (QuickSort):</strong> Se divide la matriz dada alrededor de un elemento elegido como pivot.</li>
+            <li><strong>Método de ordenamiento ShellSort:</strong> Es una generalización del ordenamiento por inserción.</li>
+        </ul>
+
+        <h3>Ejemplo práctico de Ordenación por Selección</h3>
+        <p>A continuación, un ejemplo básico de cómo funciona el algoritmo de ordenación por selección:</p>
+
+        <div class="example">
+            <h3>Ejemplo en pseudocódigo:</h3>
+            <pre>
+función ordenarSeleccion(lista):
+    para i desde 0 hasta longitud(lista)-1:
+        mínimo = i
+        para j desde i+1 hasta longitud(lista):
+            si lista[j] < lista[mínimo]:
+                mínimo = j
+        intercambiar lista[i] con lista[mínimo]
+
+lista = [64, 25, 12, 22, 11]
+ordenarSeleccion(lista)
+imprimir(lista)  // Resultado: [11, 12, 22, 25, 64]
+            </pre>
+        </div>
+
+        <button class="back-button" onclick="window.history.back();">Volver</button>
+    </div>
+
+</body>
+</html>

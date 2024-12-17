@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad 3 - Estructuras Lineales</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fff3e0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .content-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 70%;
+            overflow-y: auto;
+            max-height: 80vh;
+        }
+
+        h2 {
+            color: #f57c00;
+            font-size: 2em;
+        }
+
+        h3 {
+            color: #e65100;
+            font-size: 1.6em;
+        }
+
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        .back-button {
+            background-color: #f57c00;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .back-button:hover {
+            background-color: #e65100;
+        }
+
+        .example {
+            background-color: #fff8e1;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            border: 1px solid #f57c00;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content-container">
+        <h2>Estructuras Lineales</h2>
+
+        <h3>¿Qué son las estructuras lineales?</h3>
+        <p>Las estructuras lineales en programación son aquellas en las que los elementos se almacenan en un orden secuencial, es decir, uno al lado del otro, y cada uno tiene un único predecesor y sucesor.</p>
+
+        <h3>Ventajas y desventajas de las estructuras lineales</h3>
+        <p>Las estructuras lineales son fáciles de implementar y manipular, pero pueden tener limitaciones en cuanto a la asignación de memoria y las operaciones de inserción y eliminación.</p>
+
+        <h3>Diferentes tipos de estructuras lineales</h3>
+        <ul>
+            <li><strong>Listas:</strong> Estructura que permite el acceso a sus elementos por índice.</li>
+            <li><strong>Pilas:</strong> Estructura tipo LIFO (Last In, First Out), donde los elementos se agregan y eliminan solo desde un extremo.</li>
+            <li><strong>Colas:</strong> Estructura tipo FIFO (First In, First Out), donde los elementos se agregan por un extremo y se eliminan por el otro.</li>
+        </ul>
+
+        <h3>¿Cómo se agregan y eliminan elementos?</h3>
+        <p>Las estructuras lineales se pueden diferenciar entre sí por la forma en que se agregan y eliminan los elementos, en particular el lugar donde se producen estas acciones. Por ejemplo:</p>
+        <ul>
+            <li>Algunas estructuras permiten agregar nuevos elementos en un solo extremo, como las pilas.</li>
+            <li>Otras permiten eliminar elementos de cualquiera de los extremos, como las colas.</li>
+        </ul>
+
+        <h3>Ejemplo práctico de una estructura lineal: Pila</h3>
+        <p>A continuación, un ejemplo de cómo usar una pila para agregar y eliminar elementos:</p>
+
+        <div class="example">
+            <h3>Ejemplo en pseudocódigo:</h3>
+            <pre>
+Pila pila = nueva Pila();
+pila.push(10);  // Agrega el número 10
+pila.push(20);  // Agrega el número 20
+pila.push(30);  // Agrega el número 30
+
+valor = pila.pop();  // Elimina el número 30 (último en entrar)
+imprimir(valor);  // Imprime 30
+            </pre>
+        </div>
+
+        <button class="back-button" onclick="window.history.back();">Volver</button>
+    </div>
+
+</body>
+</html>
